@@ -16,7 +16,7 @@ function Body() {
           FAQs
         </div>
         {Data.map((item, index) => {
-          return (
+          return(
             <div
               key={index}
               className=""
@@ -36,11 +36,38 @@ function Body() {
                 {item.value}
               </div>
             </div>
-          );
-        })}
+        );
+})}
       </div>
     </div>
   );
 }
 
 export default Body;
+
+
+
+
+// {Data.map((item, index) => {
+//   return (
+//     <div
+//       key={index}
+//       className=""
+//       onClick={() => {
+//         setOpen(!open);
+//         setCurrentIndex(index);
+//       }}
+//     >
+//       <div className="my-2 flex ">
+//         {item.key} <span className={`${open && currentIndex=== index ? " rotate-45y" : ""} mx-4`}> {item.icon}</span>
+//       </div>
+//       <div
+//         className={`${
+//           open && currentIndex === index ? " block" : "hidden"
+//         }`}
+//       >
+//         {item.value}
+//       </div>
+//     </div>
+//   );
+// })}
